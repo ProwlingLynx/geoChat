@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const webpackHTMLPlugin = require('html-webpack-plugin');
 
 const config = {
   entry: './src/index.tsx',
@@ -34,7 +35,10 @@ const config = {
       '.ts',
       '.js'
     ]
-  }
+  },
+  plugins: [new webpackHTMLPlugin({
+    title: 'GeoChat',
+  })],
 };
 
 module.exports = config;

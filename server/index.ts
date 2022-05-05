@@ -1,9 +1,8 @@
-const express = require('express');
+const path = require('path');
+const server = require('./server.ts');
 
-const app = express();
 const port:number = 3000;
 
-
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`Listening to port: ${port}.`);
 });
